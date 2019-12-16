@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Menu Jogo</name>
+    <events>
+        <event-block sid="717304682549982">
+            <conditions>
+                <condition id="3" name="On touched object" sid="637812220339158" type="Touch">
+                    <param id="0" name="Object">btnNovo</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="267712782613154" type="System">
+                    <param id="0" name="Layout">Tela de cadastro</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

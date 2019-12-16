@@ -1,0 +1,173 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Tela Principal</name>
+    <events>
+        <include>Eventos Bonus</include>
+        <comment>Váriaveis de controle de pontos</comment>
+        <variable constant="0" name="Pontos" sid="481182491571497" static="0" type="number">0</variable>
+        <comment>Tela principal do jogo, serão vinculadas as folhas de eventos para controle de bonus de compras</comment>
+        <event-group description="" sid="268945803506749" title="DefineNome">
+            <sub-events>
+                <event-block sid="873514609530935">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="169792149101262" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="208121007882106" type="txtNomeJogador">
+                            <param id="0" name="Text">NomeJogador</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="460103929359131" title="AdicionaIdle">
+            <sub-events>
+                <event-block sid="753091402275125">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="128219787954894" type="Touch">
+                            <param id="0" name="Object">btnIdle</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="628867249155051" type="System">
+                            <param id="0" name="Variable">Pontos</param>
+                            <param id="1" name="Value">BonusManual+1</param>
+                        </action>
+                        <action id="0" name="Set text" sid="169921829249821" type="txtPontosJogador">
+                            <param id="0" name="Text">Pontos</param>
+                        </action>
+                        <action id="-36" name="Save" sid="437325431399378" type="System">
+                            <param id="0" name="Slot">NomeJogador</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <comment>A partir desse ponto o jogo irá identificar os bonus através de outra folha de eventos. Alguns métodos ficarão automatizados sem necessidade de clique no botão</comment>
+        <event-group description="" sid="330624214872128" title="MostrarLoja">
+            <sub-events>
+                <event-block sid="513406066713731">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="207837122801828" type="Touch">
+                            <param id="0" name="Object">btnLoja</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="632425740286847" type="FundoLoja">
+                            <param id="0" name="X">240</param>
+                            <param id="1" name="Y">320</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="177896803603280" type="btnItem01">
+                            <param id="0" name="X">91.5</param>
+                            <param id="1" name="Y">70.5</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="418263232214098" type="btnItem2">
+                            <param id="0" name="X">240</param>
+                            <param id="1" name="Y">69.5</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="969729268849316" type="btnItem3">
+                            <param id="0" name="X">387</param>
+                            <param id="1" name="Y">70</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="652113180218522" type="btnItem4">
+                            <param id="0" name="X">91.5</param>
+                            <param id="1" name="Y">196</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="397640853746271" type="btnSairLoja">
+                            <param id="0" name="X">57.5</param>
+                            <param id="1" name="Y">593.5</param>
+                        </action>
+                        <action id="-4" name="Set layer visible" sid="989397203117358" type="System">
+                            <param id="0" name="Layer">2</param>
+                            <param id="1" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="727135611971644" title="EsconderLoja">
+            <sub-events>
+                <event-block sid="449298927049968">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="233397562158292" type="Touch">
+                            <param id="0" name="Object">btnSairLoja</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="915813378501143" type="FundoLoja">
+                            <param id="0" name="X">738</param>
+                            <param id="1" name="Y">319</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="313831132510115" type="btnItem01">
+                            <param id="0" name="X">590.5</param>
+                            <param id="1" name="Y">70.5</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="401481237854630" type="btnItem2">
+                            <param id="0" name="X">739</param>
+                            <param id="1" name="Y">69.5</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="959409885578112" type="btnItem3">
+                            <param id="0" name="X">886</param>
+                            <param id="1" name="Y">70</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="747972646288264" type="btnItem4">
+                            <param id="0" name="X">590.5</param>
+                            <param id="1" name="Y">196</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="455132366487506" type="btnSairLoja">
+                            <param id="0" name="X">556.5</param>
+                            <param id="1" name="Y">593.5</param>
+                        </action>
+                        <action id="-4" name="Set layer visible" sid="816247454232770" type="System">
+                            <param id="0" name="Layer">2</param>
+                            <param id="1" name="Visibility">0</param>
+                        </action>
+                        <action id="-36" name="Save" sid="777367674333315" type="System">
+                            <param id="0" name="Slot">NomeJogador</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="629457253679912" title="BonusAutomaticos">
+            <sub-events>
+                <event-block sid="715114096924456">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="961207117838611" type="System">
+                            <param id="0" name="Interval (seconds)">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="877620359898269" type="System">
+                            <param id="0" name="Variable">Pontos</param>
+                            <param id="1" name="Value">BonusAutomatico</param>
+                        </action>
+                        <action id="0" name="Set text" sid="897043879692914" type="txtPontosJogador">
+                            <param id="0" name="Text">Pontos</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" inactive="1" sid="208345116398830" title="VoltarAoMenu">
+            <sub-events>
+                <event-block sid="738693659094990">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="613423538737458" type="Touch">
+                            <param id="0" name="Object">btnVoltarAoMenu</param>
+                        </condition>
+                        <condition id="-9" inverted="1" name="Layer is visible" sid="981246224247084" type="System">
+                            <param id="0" name="Layer">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="565277139641385" type="System">
+                            <param id="0" name="Layout">Menu Inicial</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

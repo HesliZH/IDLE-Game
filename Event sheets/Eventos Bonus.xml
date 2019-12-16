@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Eventos Bonus</name>
+    <events>
+        <variable constant="0" name="BonusAutomatico" sid="165928824567639" static="0" type="number">0</variable>
+        <variable constant="0" name="BonusManual" sid="356348229274897" static="0" type="number">0</variable>
+        <comment>Terão váriaveis de controle para pontos automaticos ou bonus manual</comment>
+        <event-group description="" sid="292216422304772" title="ComprarBonus">
+            <sub-events>
+                <event-block sid="281749162024177">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="700590471703013" type="Touch">
+                            <param id="0" name="Object">btnItem01</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="322107876733388" type="btnItem01">
+                            <param id="0" name="Instance variable">Ativo</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="966732471289571" type="System">
+                            <param id="0" name="Variable">BonusManual</param>
+                            <param id="1" name="Value">2</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="153405389050465" type="btnItem01">
+                            <param id="0" name="Instance variable">Ativo</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="221811399078459">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="929723367072467" type="Touch">
+                            <param id="0" name="Object">btnItem2</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="356105514171245" type="btnItem2">
+                            <param id="0" name="Instance variable">Ativo</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="983487156436373" type="System">
+                            <param id="0" name="Variable">BonusManual</param>
+                            <param id="1" name="Value">6</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="904012417381724" type="btnItem2">
+                            <param id="0" name="Instance variable">Ativo</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="809348495909693">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="358313481532124" type="Touch">
+                            <param id="0" name="Object">btnItem3</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="282196860829225" type="btnItem3">
+                            <param id="0" name="Instance variable">Ativo</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="895925246517699" type="System">
+                            <param id="0" name="Variable">BonusAutomatico</param>
+                            <param id="1" name="Value">2</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="356387404409285" type="btnItem3">
+                            <param id="0" name="Instance variable">Ativo</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

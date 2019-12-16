@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Tela de cadastro</name>
+    <events>
+        <variable constant="0" name="NomeJogador" sid="332623366824983" static="0" type="text"></variable>
+        <comment>Tela responsável por iniciar um save game com o nome do jogador. Caso selecionado o mesmo nome o save será reescrito</comment>
+        <event-group description="" sid="685286638889602" title="FiltraNome">
+            <sub-events>
+                <event-block sid="903314650691101">
+                    <conditions>
+                        <condition id="1" name="On text changed" sid="313355736285552" type="tbxNome" />
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="759169156626463" type="tbxNome">
+                            <param id="0" name="Instance variable">Nome</param>
+                            <param id="1" name="Value">tbxNome.Text</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" inactive="1" sid="939262997768222" title="NomeVazio">
+            <sub-events>
+                <event-block sid="536187477047990">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="285340298658380" type="System">
+                            <param id="0" name="Variable">NomeJogador</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set layer visible" sid="736175052661340" type="System">
+                            <param id="0" name="Layer">1</param>
+                            <param id="1" name="Visibility">1</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="175408993997507" type="System">
+                            <param id="0" name="Group name">&quot;NomeVazio&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="587627313298342">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="610990783457357" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="478918633327121" type="System">
+                            <param id="0" name="Layout">Tela Principal</param>
+                        </action>
+                        <action id="-36" name="Save" sid="512239461116065" type="System">
+                            <param id="0" name="Slot">NomeJogador</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="334282029459803">
+            <conditions>
+                <condition id="3" name="On touched object" sid="864703388895026" type="Touch">
+                    <param id="0" name="Object">btnIniciar</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="331452503852170" type="System">
+                    <param id="0" name="Variable">NomeJogador</param>
+                    <param id="1" name="Value">tbxNome.Nome</param>
+                </action>
+                <action id="-12" name="Set group active" sid="194418772238407" type="System">
+                    <param id="0" name="Group name">&quot;NomeVazio&quot;</param>
+                    <param id="1" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="806384836065192">
+            <conditions>
+                <condition id="3" name="On touched object" sid="203370987832204" type="Touch">
+                    <param id="0" name="Object">btnCarregarJogo</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="865391936262130" type="System">
+                    <param id="0" name="Variable">NomeJogador</param>
+                    <param id="1" name="Value">tbxNome.Nome</param>
+                </action>
+                <action id="-12" name="Set group active" sid="876188236338145" type="System">
+                    <param id="0" name="Group name">&quot;CarregaJogo&quot;</param>
+                    <param id="1" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" inactive="1" sid="446976457903970" title="CarregaJogo">
+            <sub-events>
+                <event-block sid="599217228934132">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="159718538455606" type="System">
+                            <param id="0" name="Variable">NomeJogador</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set layer visible" sid="536660034251493" type="System">
+                            <param id="0" name="Layer">1</param>
+                            <param id="1" name="Visibility">1</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="721548995525994" type="System">
+                            <param id="0" name="Group name">&quot;CarregaJogo&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="109361443425156">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="161768196169375" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="217353184738129" type="System">
+                            <param id="0" name="Layout">Tela Principal</param>
+                        </action>
+                        <action id="-37" name="Load" sid="207066336818556" type="System">
+                            <param id="0" name="Slot">NomeJogador</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>
