@@ -28,11 +28,12 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="object-folder/Sprites/" />
         <folder expanded="0" path="object-folder/Sprites/Menu Inicial/" />
         <folder expanded="0" path="object-folder/Sprites/Menu De Jogo/" />
-        <folder expanded="1" path="object-folder/Sprites/Tela de cadastro/" />
-        <folder expanded="0" path="object-folder/Sprites/Tela Principal/" />
-        <folder expanded="0" path="object-folder/Sprites/Tela Principal/Botão/" />
+        <folder expanded="0" path="object-folder/Sprites/Tela de cadastro/" />
+        <folder expanded="1" path="object-folder/Sprites/Tela Principal/" />
+        <folder expanded="1" path="object-folder/Sprites/Tela Principal/Botão/" />
         <folder expanded="0" path="object-folder/Sprites/Tela Principal/Loja/" />
-        <folder expanded="1" path="object-folder/Sprites/Menu de carregamento/" />
+        <folder expanded="1" path="object-folder/Sprites/Tela Principal/Celular/" />
+        <folder expanded="0" path="object-folder/Sprites/Menu de carregamento/" />
         <folder expanded="1" path="object-folder/Arrays/" />
         <folder expanded="1" path="object-folder/Controles/" />
         <folder expanded="1" path="layout-folder/" />
@@ -52,11 +53,14 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/btnIdle/" />
         <folder expanded="1" path="animation-folder/btnLoja/" />
         <folder expanded="1" path="animation-folder/btnVoltarAoMenu/" />
+        <folder expanded="1" path="animation-folder/btnCel/" />
         <folder expanded="1" path="animation-folder/FundoLoja/" />
         <folder expanded="1" path="animation-folder/btnItem01/" />
         <folder expanded="1" path="animation-folder/btnItem2/" />
         <folder expanded="1" path="animation-folder/btnItem3/" />
         <folder expanded="1" path="animation-folder/btnItem4/" />
         <folder expanded="1" path="animation-folder/btnSairLoja/" />
+        <folder expanded="1" path="animation-folder/sprCelular/" />
+        <folder expanded="1" path="animation-folder/sprFundo/" />
     </folders-expanded>
 </c2uistate>

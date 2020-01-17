@@ -10,9 +10,11 @@
     <unique-id>2nj0uyway0rua</unique-id>
     <saved-with-version>26500</saved-with-version>
     <used-plugins>
+        <plugin author="Scirra" id="Arr" version="1">Array</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="TextBox" version="1">Text box</plugin>
+        <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
         <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
     </used-plugins>
     <used-behaviors />
@@ -146,6 +148,14 @@
                             </animation>
                         </animation-folder>
                     </object-type>
+                    <object-type name="btnCel" sid="991720942218818">
+                        <plugin id="Sprite" />
+                        <animation-folder>
+                            <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="698432001404224" speed="5">
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            </animation>
+                        </animation-folder>
+                    </object-type>
                 </object-folder>
                 <object-folder name="Loja">
                     <object-type name="FundoLoja" sid="511559105936241">
@@ -209,6 +219,26 @@
                         </animation-folder>
                     </object-type>
                 </object-folder>
+                <object-folder name="Celular">
+                    <object-type name="sprCelular" sid="382766738188402">
+                        <plugin id="Sprite" />
+                        <animation-folder>
+                            <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="786994853101406" speed="5">
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Projetos\IDLE-Game\Texturas\mobile.png">
+                                    <collision-poly>
+                                        <point x="0.0638629" y="0.0169082" />
+                                        <point x="0.5" y="0.000805153" />
+                                        <point x="0.936137" y="0.0169082" />
+                                        <point x="0.998442" y="0.5" />
+                                        <point x="0.96729" y="0.999195" />
+                                        <point x="0.0327103" y="0.999195" />
+                                        <point x="0.00155763" y="0.5" />
+                                    </collision-poly>
+                                </frame>
+                            </animation>
+                        </animation-folder>
+                    </object-type>
+                </object-folder>
                 <object-type name="txtNome" sid="965796237585929">
                     <plugin id="Text" />
                 </object-type>
@@ -220,6 +250,18 @@
                 </object-type>
                 <object-type name="txtPontosJogador" sid="251207782971631">
                     <plugin id="Text" />
+                </object-type>
+                <object-type name="sprFundo" sid="416312757984382">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="544284048323917" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Projetos\IDLE-Game\Texturas\Sprite-0001.png" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="sprMadeira" sid="920033862318832">
+                    <plugin id="TiledBg" />
+                    <texture original-source="C:\Projetos\IDLE-Game\Texturas\Sprite-0002.png" />
                 </object-type>
             </object-folder>
             <object-folder name="Menu de carregamento">
@@ -234,7 +276,14 @@
                 </object-type>
             </object-folder>
         </object-folder>
-        <object-folder name="Arrays" />
+        <object-folder name="Arrays">
+            <object-type global="1" name="array_Personagens" sid="537506896509556">
+                <plugin id="Arr" />
+            </object-type>
+            <object-type global="1" name="array_Niveis" sid="865594181419337">
+                <plugin id="Arr" />
+            </object-type>
+        </object-folder>
         <object-folder name="Controles">
             <object-type name="Touch" sid="935037955615989">
                 <plugin id="Touch" />

@@ -4,11 +4,11 @@
 It is entirely optional and the project will load without it.  If you are placing the project under source control,
 you probably do not want to add any .uistate.xml files to the repository.-->
     <camera>
-        <position-x>304.15</position-x>
-        <position-y>306.25</position-y>
-        <position-z>177.156</position-z>
-        <lookat-x>304.15</lookat-x>
-        <lookat-y>306.25</lookat-y>
+        <position-x>240</position-x>
+        <position-y>320</position-y>
+        <position-z>161.051</position-z>
+        <lookat-x>240</lookat-x>
+        <lookat-y>320</lookat-y>
         <lookat-z>0</lookat-z>
     </camera>
     <snap-to-grid>0</snap-to-grid>
@@ -23,10 +23,12 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <property expanded="0" name="Margins" />
         <property expanded="1" name="Effects" />
     </properties>
-    <active-layer name="Loja" />
+    <active-layer name="Botão IDLE" />
     <layers>
         <layer locked="1" name="Fundo" parallax-in-editor="0" visible="1" />
-        <layer locked="1" name="Botão IDLE" parallax-in-editor="0" visible="1" />
-        <layer locked="0" name="Loja" parallax-in-editor="0" visible="1" />
+        <layer locked="1" name="Madeira" parallax-in-editor="0" visible="1" />
+        <layer locked="0" name="Botão IDLE" parallax-in-editor="0" visible="1" />
+        <layer locked="1" name="Loja" parallax-in-editor="0" visible="1" />
+        <layer locked="1" name="Celular" parallax-in-editor="0" visible="1" />
     </layers>
 </c2uistate>
